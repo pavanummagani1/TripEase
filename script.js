@@ -1,7 +1,7 @@
 async function getLocations() {
-    let loader = document.getElementById('loader');
+    // let loader = document.getElementById('loader');
     try {
-        loader.style.display = 'grid'
+        // loader.style.display = 'grid'
         let response = await fetch('https://square-pouncing-asphalt.glitch.me/Locations');
         if (!response.ok) {
             throw new Error(`Data failed to fetch with status: ${response.status}`);
@@ -16,7 +16,7 @@ async function getLocations() {
     } catch (err) {
         console.error('Error fetching locations:', err);
     }finally{
-        loader.style.display = 'none'
+        // loader.style.display = 'none'
     }
 }
 
