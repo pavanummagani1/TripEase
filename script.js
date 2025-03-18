@@ -109,7 +109,7 @@ getResturants();
 
 // Get Popular Hotels
 async function getHotels() {
-    let loader = document.getElementById('loader');
+    let loader = document.getElementById('hotelLoader');
     try {
         loader.style.display = 'grid'
         let response = await fetch('https://pattern-vanilla-switch.glitch.me/Hotels');
@@ -149,8 +149,8 @@ function createHotelLocationButton(location, hotels) {
 }
 
 function displayHotels(hotels) {
-    let hotelContainer = document.getElementById('hotels'); // Corrected ID
-    hotelContainer.innerHTML = ''; // Clear previous content
+    let hotelContainer = document.getElementById('hotels'); 
+    hotelContainer.innerHTML = ''; 
 
     hotels.forEach(hotel => {
         let hotelDiv = document.createElement('div');
@@ -167,8 +167,8 @@ function sendHotels(hotel){
         type:'hotel',
         item:hotel
     }
-        localStorage.setItem('viewPlace', JSON.stringify(newObj));
-        window.location.href = './item/item.html'; // Redirect to the details page
+    localStorage.setItem('viewPlace', JSON.stringify(newObj));
+    window.location.href = './item/item.html'; // Redirect to the details page
 }
 
 getHotels();
@@ -177,7 +177,7 @@ getHotels();
 
 // Get Popular Locations
 async function getPopularLocations() {
-    let loader = document.getElementById('loader');
+    let loader = document.getElementById('locationLoader');
     try {
         loader.style.display = 'grid'
         let response = await fetch('https://maddening-hill-alphabet.glitch.me/PopularLocations');

@@ -30,6 +30,9 @@ li{
 
 /* Header */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     background-color: white;
     color: black;
     display: flex;
@@ -78,7 +81,7 @@ header {
     z-index: 9999;
     /* Initially hidden */
     width: 300px;
-    height: 300px;
+    height: 400px;
     background: #222;
     /* Dark background */
     color: white;
@@ -325,6 +328,9 @@ header {
     text-align: center;
     background-color: #fff;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -487,41 +493,6 @@ header {
     font-size: 0.9rem;
 }
 
-
-
-.loginalert {
-    background-color: #ed103d;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    display: none;
-    position: fixed;
-    top: 120px;
-    right: 20px;
-    z-index: 999;
-}
-
-.loader {
-    width: 50px;
-    aspect-ratio: 1;
-    display: none;
-  }
-  .loader::before,
-  .loader::after{
-    content: "";
-    grid-area: 1/1;
-    border-radius: 50%;
-    background: repeating-conic-gradient(#0000,#000 1deg 18deg,#0000 20deg 36deg);
-    -webkit-mask:repeating-radial-gradient(farthest-side,#000 0 10%,#0000 0 20%);
-    animation: l10 4s infinite linear;
-  }
-  .loader::after{
-    -webkit-mask:repeating-radial-gradient(farthest-side,#0000 0 10%,#000 0 20%);
-    animation-direction: reverse;
-  }
-  @keyframes l10 {
-    100% {transform:rotate(.5turn)}
-  }
 
 
 
@@ -723,3 +694,48 @@ header {
         font-size: 0.85rem;
     }
 }
+#loader {
+    width: 90px;
+    height: 12px;
+    --c:#000 50%,#0000 0;
+    background: 
+      linear-gradient(90deg ,var(--c)) 0 0%,
+      linear-gradient(-90deg,var(--c)) 0 50%,
+      linear-gradient(90deg ,var(--c)) 0 100%;
+    background-size: 8px calc(100%/3);
+    background-repeat: repeat-x;
+    animation: l8 .25s infinite linear;
+  }
+  @keyframes l8 {
+      100% {background-position: -8px 0%,-8px 50%,-8px 100%}
+  }
+#hotelLoader {
+    width: 90px;
+    height: 12px;
+    --c:#000 50%,#0000 0;
+    background: 
+      linear-gradient(90deg ,var(--c)) 0 0%,
+      linear-gradient(-90deg,var(--c)) 0 50%,
+      linear-gradient(90deg ,var(--c)) 0 100%;
+    background-size: 8px calc(100%/3);
+    background-repeat: repeat-x;
+    animation: l8 .25s infinite linear;
+  }
+  @keyframes l8 {
+      100% {background-position: -8px 0%,-8px 50%,-8px 100%}
+  }
+#locationLoader {
+    width: 90px;
+    height: 12px;
+    --c:#000 50%,#0000 0;
+    background: 
+      linear-gradient(90deg ,var(--c)) 0 0%,
+      linear-gradient(-90deg,var(--c)) 0 50%,
+      linear-gradient(90deg ,var(--c)) 0 100%;
+    background-size: 8px calc(100%/3);
+    background-repeat: repeat-x;
+    animation: l8 .25s infinite linear;
+  }
+  @keyframes l8 {
+      100% {background-position: -8px 0%,-8px 50%,-8px 100%}
+  }

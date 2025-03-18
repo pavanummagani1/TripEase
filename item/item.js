@@ -215,7 +215,10 @@ confirmBtn.addEventListener('click', () => {
         alert("No booking item selected.");
         return;
     }
-
+    // let  loginDetails = JSON.parse(localStorage.getItem('LoginDetails')) ||[];
+    // if(loginDetails.emailVerified===false){
+    //     window.location.href = "../login/login.html"
+    // }
     const popularBookings = {
         item: currentBookingItem,
         date: date,
